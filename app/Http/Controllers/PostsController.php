@@ -10,6 +10,14 @@ class PostsController extends Controller
     {
         return view('posts.index');
     }
+    public function create()
+    {
+        return view('posts.create');
+    }
+    public function edit()
+    {
+        return view('posts.edit');
+    }
     public function show()
     {
         return view('posts.show');
