@@ -7,30 +7,22 @@
         </div>
     </div>
     <div class="container my-4">
+        @foreach ($posts as $post)
         <div class="card mb-4">
             <div class="card-header">
-                <h2>Post title</h2>
+                <h2>{{$post->title}}</h2>
             </div>
             <div class="card-body">
-                <p class="card-text">Post body</p>
+                <p class="card-text">{{$post->body}}</p>
                 <a class="card-link" href="{{route('posts.show')}}">詳細をみる</a>
             </div>
             <div class="card-footer">
-                <span>投稿日時:2020-1-1</span>
+                <span>{{$post->created_at->format('Y-m-d')}}</span>
             </div>
         </div>
-        <div class="card mb-4">
-            <div class="card-header">
-                <h2>Post title</h2>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Post body</p>
-                <a class="card-link" href="">詳細をみる</a>
-            </div>
-            <div class="card-footer">
-                <span>投稿日時:2020-1-1</span>
-            </div>
+        @endforeach ($posts as $post)
+        <div class="d-flex justify-content-center mb-5">
+            {{$posts->links()}}
         </div>
     </div>
-
 @endsection('content')
