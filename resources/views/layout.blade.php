@@ -14,7 +14,7 @@
   <body>
       <header class="navbar navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="">Hacksレビュー</a>
+          <a class="navbar-brand" href="{{route('top')}}">Hacksレビュー</a>
         </div>
       </header>
 

@@ -16,3 +16,4 @@
 // });
 
 Route::get('/', 'PostsController@index')->name('top');
+Route::get('/show', 'PostsController@show')->name('posts.show');
