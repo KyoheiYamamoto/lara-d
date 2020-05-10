@@ -15,8 +15,7 @@ class PostsController extends Controller
         return view('posts.index',['posts' => $posts]);
     }
 
-    public function create()
-    {
+    public function create(){
         return view('posts.create');
     }
 
