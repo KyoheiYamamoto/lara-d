@@ -62,7 +62,7 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($post_id);
 
-        \DB::transaction(function () use ($post){
+        \DB::transaction(function () use ($post) {
             $post->delete();
         });
 

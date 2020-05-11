@@ -16,9 +16,11 @@
 // });
 
 Route::get('/', 'PostsController@index')->name('top');
-Route::get('/create', 'PostsController@create')->name('posts.create');
-Route::post('/store', 'PostsController@store')->name('posts.store');
-Route::get('/show/{post_id}', 'PostsController@show')->name('posts.show');
-Route::get('/edit/{post_id}', 'PostsController@edit')->name('posts.edit');
-Route::put('/update/{post_id}', 'PostsController@update')->name('posts.update');
-Route::delete('/destroy/{post_id}', 'PostsController@destroy')->name('posts.destroy');
+Route::resource('posts', 'PostsController',['only'=>['create','store','show','edit','update','destroy']]);
+
+// Route::get('/create', 'PostsController@create')->name('posts.create');
+// Route::post('/store', 'PostsController@store')->name('posts.store');
+// Route::get('/show/{post_id}', 'PostsController@show')->name('posts.show');
+// Route::get('/edit/{post_id}', 'PostsController@edit')->name('posts.edit');
+// Route::put('/update/{post_id}', 'PostsController@update')->name('posts.update');
+// Route::delete('/destroy/{post_id}', 'PostsController@destroy')->name('posts.destroy');

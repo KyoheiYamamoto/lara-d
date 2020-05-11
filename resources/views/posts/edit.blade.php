@@ -4,6 +4,15 @@
     <div class="container my-4">
         <div class="border p-4">
             <h5 class="mb-4">投稿の編集</h5>
+            @if ($errors->any())
+                <div>
+                    <ul class="alert alert-danger">
+                        @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             {!!Form::open(['route'=>['posts.update',$post->id],'method'=>'put']) !!}
                 <div class="form-group">
                 {!!Form::label('title','タイトル')!!}
