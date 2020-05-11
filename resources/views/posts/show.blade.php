@@ -12,13 +12,13 @@
     <div class="container my-4">
         <div class="card mb-4">
             <div class="card-header">
-                <h2>Post title</h2>
+                <h2>{{$post->title}}</h2>
             </div>
             <div class="card-body">
-                <p class="card-text">Post body</p>
+                <p class="card-text">{{$post->body}}</p>
             </div>
             <div class="card-footer">
-                <span>投稿日時:2020-1-1</span>
+                <span>{{$post->created_at->format('Y-m-d')}}</span>
             </div>
         </div>
     </div>

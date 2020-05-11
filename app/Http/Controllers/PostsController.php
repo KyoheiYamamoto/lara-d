@@ -31,9 +31,11 @@ class PostsController extends Controller
         return redirect()->route('top');
     }
 
-    public function show()
+    public function show($post_id)
     {
-        return view('posts.show');
+        $post = Post::findOrFail($post_id);
+
+        return view('posts.show',['post'=>$post]);
     }
 
     public function edit()
