@@ -62,7 +62,10 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($post_id);
 
-        return redirect()->route('top');
+        \DB::transaction(function () use ($post){
+            $post->delete();
+        });
 
+        return redirect()->route('top');
     }
 }
