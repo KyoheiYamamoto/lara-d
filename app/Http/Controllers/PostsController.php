@@ -20,18 +20,18 @@ class PostsController extends Controller
     }
 
     public function store(Request $request)
-    //リクエストにインスタンスの生成
     {
         $params = $request->validate([
             'title'=>'required|max:20',
             'body'=>'required|max:140',
         ]);
 
-        dd($params);
-        return view('posts.create');
+        // dd($params);
+        Post::create($params);
+        return redirect()->route('top');
     }
 
-     public function show()
+    public function show()
     {
         return view('posts.show');
     }

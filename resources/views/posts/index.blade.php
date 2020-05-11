@@ -17,7 +17,7 @@
                 <a class="card-link" href="{{route('posts.show')}}">詳細をみる</a>
             </div>
             <div class="card-footer">
-                <span>{{$post->created_at->format('Y-m-d')}}</span>
+                <span>投稿日時:{{$post->created_at->format('Y-m-d')}}</span>
             </div>
         </div>
         @endforeach ($posts as $post)
