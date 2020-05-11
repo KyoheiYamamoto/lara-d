@@ -4,8 +4,10 @@
     <div class="container">
         <div class="container mt-4">
             <div class="text-right">
+             {!!Form::open(['route'=>['posts.update',$post->id],'method'=>'put']) !!}
                 <a class="btn btn-primary" href="{{route('posts.edit',['post_id'=>$post->id])}}">編集する</a>
                 <a class="btn btn-danger" href="">削除する</a>
+             {!!Form::close()!!}
             </div>
         </div>
     </div>
@@ -18,7 +20,7 @@
                 <p class="card-text">{{$post->body}}</p>
             </div>
             <div class="card-footer">
-                <span>{{$post->created_at->format('Y-m-d')}}</span>
+                <span>投稿日時：{{$post->created_at->format('Y-m-d')}}</span>
             </div>
         </div>
     </div>
