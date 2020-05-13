@@ -1,4 +1,4 @@
-<!-- {{-- layouts/admin.blade.phpを読み込む --}} -->
+<!-- {{-- layout.blade.phpを読み込む --}} -->
 @extends('layout')
 
 @section('content')
