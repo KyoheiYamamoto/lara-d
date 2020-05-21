@@ -7,6 +7,7 @@
              {!!Form::open(['route'=>['posts.destroy',$post->id],'method'=>'delete']) !!}
                 <a class="btn btn-primary" href="{{route('posts.edit',['post_id'=>$post->id])}}">編集する</a>
                 {!!Form::submit('削除する',['class'=>'btn btn-danger'])!!}
+
              {!!Form::close()!!}
             </div>
         </div>
@@ -24,5 +25,7 @@
             </div>
         </div>
     </div>
-
+    <div class="container mb-4">
+         <a class="btn btn-secondary" href="{{route('top')}}">topへ</a>
+    </div>
 @endsection('content')
